@@ -1,14 +1,130 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" contect="Stephens' journal and projects">
+		<meta name="keywords" content="journal, projects, stafngrimr, developer">
+		<meta name="author" content="Stafngrimr">
+		<meta name="viewport" content="initial-scale=1, width=device-width">
 
-{% block main %}
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+		<link rel="stylesheet" type="text/css" href="static/main.css">
+		<link rel="icon" href="static/skull.ico">
 
-    <div class="flex_container">
-      <div class="text_container">
-        {% for row in results %}
-        <p>{{ journalEntry }}</p>
-        {% endfor %}
-      </div>
+		<title>myJournal:2</title>
+	</head>
 
-    </div>
+	<body>
 
-{% endblock %}
+		<header>
+				<form action="/update" method="get" class="login">
+					<button type="submit" class="submit">Login</button>
+					<input type="password" autofocus autocomplete="off"name="login" placeholder="Login" >
+				</form>
+
+		</header>
+
+		<div class="grid_container">
+			<div class="left_container">
+				<img src="static/staf.png" alt="stafngrimr logo" width="150px">
+			</div>
+			<div class="content_container">
+			 <div class="text_container">
+				 <small>24-04-22</small>
+				 <p>First week without the structured course and it's been good I think. It's
+					 felt a bit slow in parts, but I think that's inevitable as there is some
+					 reaching out of comfort zones and reading documentation on your own to figure
+					 things out.</p>
+
+				 <p>I decided to start with revamping this journal site and to get that going. As
+					 I think I mentioned last week I want to have it so that I'm not hard coding
+					 these journal entries into the html, but rather creating a unique login that
+					 takes me to a page to make a new update. I think the best way to do this
+					 involves having a small database for the journal entries, so for that I was
+					 looking into SQLAlchemy, which was the first part of new documentation to
+					 go through. It works differently to CS50s database connectivity code, but
+					 what I want to do is quite simple so I've just about got it down I think.</p>
+
+				 <p>I also had to install flask and all it's recommended dependencies, as well
+					 as learning about virtual environments and their importance, which went
+					 fine and I've got it all up and running. I want to read into things like
+					 Flask and Jinja a bit more, to see what else I can do with them and make
+					 the most of it. I figured this is the first framework I'm learning so I
+					 best dive deep to see how these things operate and what can be done with
+					 them.</p>
+
+				 <p>I've also decided to use Bulma as a CSS framework, to try something different
+					 from bootstrap. Since this is something a lot simpler, I might do some
+					 research to try a completely different one for the art shop, but we'll
+					 see about that when I get to it.</p>
+
+				 <p>I don't think this will take me too much longer to put together, but I wanna
+					 do it properly and also get it working on my own virtual server. I'm going
+					 to just do this site for now and then move onto something else before I
+					 do the art shop, mainly so I can have it up for a month, see how easy/cheap
+					 it is to do it through Digital Ocean and spend some time doing some research
+					 on other options.</p>
+
+				 <p>During that time I wanna go through TOP, and I was also considering regoing
+					 through CS50, as the course material I did was for last year and it'd be
+					 interesting to just go through the problems again one by one and see how
+					 quickly I can do them again from scratch. I think since conceptually I already
+					 know how to solve each one it'll be more about reinforcing some C code into
+					 my brain.</p>
+
+				 <p>Then when that's done I can finish the C-Game and do the Final Project!
+					 Till next time.</p>
+				</div>
+				<div class="text_container">
+					<small>18-04-22</small>
+ 				 <p>So, we missed a week, but that's fine. There's a lot more to talk about
+ 					 this week than there was last week. I've finished the CS50 course, apart
+ 					 from the final project, but I'm going to concentrate on something else
+ 					 before jumping into the "final project."</p>
+
+ 				 <p>I finished the Flask tasks, which were a lot of fun. The Birthdays application
+ 					 was a good easy one to start with and then there was the implementation of
+ 					 a webapp that allowed you to buy/sell stocks, checking the prices via an
+ 					 IEX.com API and also have a database where users had their information/stocks
+ 					 saved. It took all of last week but each piece was easier than the last
+ 					 as I was understanding more and more of how all the pieces fit together.
+ 					 It also gave good practice for things like sql and jinja. I'm definitely
+ 					 going to see if I can use something similar to make my websites now so that
+ 					 I can make them more dynamic, and that's why I'm not going to be jumping
+ 					 straight into the final project.</p>
+
+ 				 <p>I'd like the final project to be something totally different. Something
+ 					 like a game, or a mobile app. Something that will require reading the documentation
+ 					 for a language I've not really delved into before and it might make it
+ 					 harder but that's half the point. The other reason being that in a month
+ 					 or two my annual sub for one.com is open and I don't want to renew it. I
+ 					 want to have this site and my other site on my own servers, and ideally
+ 					 completely redone using all the new knowledge. I'll build my own shop that
+ 					 links with creativehub/printful for my artist stuff, and I'd like the journal
+ 					 to have it's own database where all the entries are saved so that I can
+ 					 show them/add to them and search through them dynamically through the website.
+ 					 (At the moment these are all being hardcoded into the site via my IDE).</p>
+
+ 				 <p>So apart from finishing the Flask app, there was also the last lecture
+ 					 to watch which was something of a recap/conclusion but also included an
+ 					 interesting talk on the ethics of sharing information and web/software design.
+ 					 Definitely a topical and interesting discussion that I saved for today and
+ 					 went through at a leisurely pace.</p>
+
+ 				 <p>Next steps then are to start desigining mentally/on paper and in whatever
+ 					 other way the websites. I think I'll start with this one as I suspect it'll
+ 					 be the easier one to do. It'll also involve playing with the virtual server
+ 					 I have with digital ocean so that'll be something of a learning experience also.</p>
+				</div>
+		 </div>
+			<div class="right_container">
+				<p>calendar sticky?</p>
+			</div>
+		</div> <!-- end of content -->
+
+		<footer>
+			<small>Stafngrimr&#169;</small>
+		</footer>
+
+	</body>
+</html>
