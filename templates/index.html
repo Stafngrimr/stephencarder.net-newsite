@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <div class="flex_container">
+      <div class="text_container">
+        {% for row in results %}
+        <p>{{ journalEntry }}</p>
+        {% endfor %}
+      </div>
+
+    </div>
+
+{% endblock %}
