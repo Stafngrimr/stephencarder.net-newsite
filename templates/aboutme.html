@@ -1,58 +1,48 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <html lang="en-US">
-    <meta name="description" content="staf's projectJournalling project">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Stafngrimr">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "layout.html" %}
 
-    <link href="main.css" style="text/css" rel="stylesheet">
-    <link rel="shortcut icon" href="img/skull.ico" />
+{% block title %}
+	About Me
+{% endblock %}
 
-    <title>aboutMe</title>
-  </head>
+{% block main %}
 
-  <body>
-    <div class="menu">
-      <a href="index.html">
-        <img src="img/staf.png" alt="stafLogo" width="150px">
-      </a>
-        <br>
-        <br>
-      <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'>
-      </script>
-      <script type='text/javascript'>kofiwidget2.init
-            ('Support Me on Ko-fi', '#496270', 'Z8Z564F4J');kofiwidget2.draw();
-      </script>
-    </div>
+		<div class="left_container">
+			<h2>Links</h2>
+			<li><a href="http://stafngrimr.com" target="_blank">www.stafngrimr.com</a></li>
+			<br>
+			<li><a href="http://github.com/Stafngrimr" target="_blank">Github</a></li>
+			<br>
+			<li><a href="http://www.linkedin.com/in/stafngrimr/" target="_blank">Linkedin</a></li>
+			<br>
+			<li><a href="http://www.instagram.com/staf_sketches" target="_blank">Instagram</a></li>
+			<br>
+			<li><a href="http://twitter.com/Stafngrimr" target="_blank">Twitter</a></li>
+		</div>
 
-    <div class="flex_container">
-      <div class="text_container">
-        <small>aboutMe</small>
-        <p>My name is Stephen and I am going to teach myself to code. I don’t
-          have any professional experience but I’ve been making amateur websites
-          for many years off and on, and consequently have pretty decent experience
-          with HTML & CSS.
-        </p>
-        <p>I’ll be focussing on javascript at first, and using this page to journal
-          my experience using the resources I find online. I have not paid for any
-          courses as yet, and want to keep it that way if possible. I decided it
-          would be a good idea to sit down once a week and reflect on what I had
-          tried to teach myself, whether I struggled, and whether the resources I
-          used were good, and consider making any changes in my approach.
-        </p>
-        <p>As well as being a bit of a nerd I'm also an artist. I work with oil paints
-          as well as pencils, and when I have time I attend life drawing sessions.
-          If you're interested in that part of my life also you can check out my
-          work below:
-        </p>
-        <a href="http://www.stafngrimr.com" target="_blank">www.stafngrimr.com</a>
-        <div class="image-container">
-          <img src="img/aboutme.jpg" alt="It's only bloody me!" width="50%">
-        </div>
+		<div class="content_container">
+			<div class="aboutme">
+				<img src="static/staf.jpeg" alt="Photo of Me" id="selfie">
+				<div class="text_container">
+					<small>aboutMe</small>
+					<p>My name is Stephen and I am going to teach myself to code. I don’t
+						have any professional experience but I’ve been making amateur websites
+						for many years off and on, and consequently have pretty decent experience
+						with HTML & CSS.
+					</p>
+					<p>I’ll be focussing on javascript at first, and using this page to journal
+						my experience using the resources I find online. I have not paid for any
+						courses as yet, and want to keep it that way if possible. I decided it
+						would be a good idea to sit down once a week and reflect on what I had
+						tried to teach myself, whether I struggled, and whether the resources I
+						used were good, and consider making any changes in my approach.
+					</p>
+					<p>As well as being a bit of a nerd I'm also an artist. I work with oil paints
+						as well as pencils, and when I have time I attend life drawing sessions.
+						If you're interested in that part of my life also you can check out my
+						work below:
+					</p>
+			</div>
       </div>
-    </div> <!--flex_container closer-->
-  </body>
-</html>
+		</div>
+
+{% endblock %}

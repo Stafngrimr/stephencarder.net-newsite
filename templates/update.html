@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="description" contect="Stephens' journal and projects">
-		<meta name="keywords" content="journal, projects, stafngrimr, developer">
-		<meta name="author" content="Stafngrimr">
-		<meta name="viewport" content="initial-scale=1, width=device-width">
+{% extends "layout.html" %}1
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-		<link rel="stylesheet" type="text/css" href="static/main.css">
-		<link rel="icon" href="static/skull.ico">
+{% block title %}
+	Submit Entry
+{% endblock %}
 
-		<title>myJournal:2</title>
-	</head>
+{% block main %}
 
-	<body>
-		<p> You've got to the update page!</p>
-		<form action="/" method="get">
-			<button class="button is-small is-success" type="submit">Home!</button>
-		</form>
-		<footer>
-			<small>Stafngrimr&#169;</small>
-		</footer>
-	</body>
-</html>
+		<div class="left_container">
+
+		</div>
+
+		<div class="content_container">
+			<div class="update">
+				<form action="/update" method="post">
+					<input type="text" autocomplete="off" name="entry" placeholder="Alrighty, so today..." >
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+
+		</div>
+
+{% endblock %}

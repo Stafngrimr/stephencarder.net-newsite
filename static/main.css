@@ -2,33 +2,50 @@
 	main stylesheet for stephencarder.net
 */
 
-html, body {
-	margin: 0;
-}
-
 body {
 	background-image: url("bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	width: 100%;
-	height: 100%;
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 14px;
 	color: white;
 }
 
 header {
-	display: flex;
-	justify-content: right;
+	display: block;
 	top: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
 }
 
-.login {
-	margin: 20px;
+#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 150px;
+}
+
+.aboutme {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.aboutme > * {
+	flex: 1;
+	min-width: 212px;
+}
+
+#selfie {
+	display: block;
+	width: 200px
+}
+
+#login {
+	position: absolute;
+	top: 15px;
+	right: 15px;
 }
 
 .grid_container {
@@ -36,9 +53,17 @@ header {
 	grid-template-columns: 1fr 3fr 1fr;
 }
 
-.left_container, .right_container {
-	justify-self: center;
+.content_container {
 	margin-top: 40px;
+}
+
+.left_container {
+	justify-self: center;
+	margin-top: 80px;
+}
+
+.right_container {
+	margin-top: 80px;
 }
 
 footer {
@@ -48,11 +73,12 @@ footer {
 }
 
 @media (max-width : 900px) {
-	.left_container, .right_container {
+	.left_container, .right_container, #login {
 		display: none;
 	}
 
 	footer {
+		position: absolute;
 		top: 10px;
 	}
 
@@ -68,10 +94,15 @@ div.text_container {
     border-radius: 20px;
 }
 
-small {
-	font-weight: bold;
+div.update {
+	display: flex;
+	flex-flow: column wrap;
 }
 
-.submit {
-	visibility: hidden;
+#submit {
+	display: none;
+}
+
+a {
+	color: white;
 }

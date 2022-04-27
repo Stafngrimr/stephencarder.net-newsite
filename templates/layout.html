@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" contect="Stephen's journal and projects">
+		<meta name="keywords" content="journal, projects, stafngrimr, developer, artist, oil paints">
+		<meta name="author" content="Stafngrimr">
+		<meta name="viewport" content="initial-scale=1, width=device-width">
+
+		<link rel="stylesheet" type="text/css" href="static/main.css">
+		<link rel="icon" href="static/skull.ico">
+
+		<title>stephen: {%block title %}{% endblock %}</title>
+	</head>
+
+	<body>
+
+		<header>
+			<a href="/"><img src="static/staf.png" id="logo" alt="stafngrimr logo"></a>
+			<form action="/" method="post" id="login">
+				<input type="password" autofocus autocomplete="off" name="login" placeholder="stephen">
+				<button type="submit" id="submit"></button>
+			</form>
+		</header>
+
+		<div class="grid_container">
+			{% block main %}{% endblock %}
+
+			<div class="right_container">
+				<ul>
+					<li><a href="/aboutme">About Me</a></li>
+					<li><a href="/projects">Projects</a></li>
+				</ul>
+			</div>
+		</div> <!-- end of content -->
+
+		<footer>
+			<p>Stafngrimr&#169;</p>
+		</footer>
+
+	</body>
+</html>
