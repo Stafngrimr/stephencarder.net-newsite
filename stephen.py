@@ -17,12 +17,6 @@ def index():
 			print("HTTP400: Type Something.")
 			return redirect("/")
 
-		if not check_password_hash("55BFEABAD7B5D4F489B28475125362AE485A3EEE", request.form.get("login")):
-			print("HTTP400: Wrong password dummy.")
-			return redirect("/")
-
-		session["user_id"] = 1
-
 		return render_template("update.html")
 	else:
 		#TODO: Show top 3 entries.
