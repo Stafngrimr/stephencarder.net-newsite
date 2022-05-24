@@ -24,6 +24,7 @@ header {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 3%;
 	width: 150px;
 }
 
@@ -72,7 +73,36 @@ footer {
 	bottom: 10px;
 }
 
+.text_container {
+    margin: 30px;
+    padding: 30px;
+    background-color: #236363;
+    border-radius: 20px;
+}
+
+.update {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+#submit {
+	display: none;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 @media (max-width : 900px) {
+	.content_container {
+		margin-top: 20px;
+	}
+
 	.left_container, .right_container, #login {
 		display: none;
 	}
@@ -85,24 +115,9 @@ footer {
 	.grid_container {
 		grid-template-columns: 1fr;
 	}
-}
 
-div.text_container {
-    margin: 30px;
-    padding: 30px;
-    background-color: #236363;
-    border-radius: 20px;
-}
-
-div.update {
-	display: flex;
-	flex-flow: column wrap;
-}
-
-#submit {
-	display: none;
-}
-
-a {
-	color: white;
+	.text_container {
+		margin: 0;
+		margin-bottom: 20px;
+	}
 }
