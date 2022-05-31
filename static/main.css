@@ -82,11 +82,22 @@ footer {
 
 .update {
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: column nowrap;
+	gap: 10px;
+	align-items: center;
 }
 
-#submit {
+#login-submit {
 	display: none;
+}
+
+#update-form {
+	width: 700px;
+	height: 450px;
+}
+
+#update-submit {
+	width: 100px;
 }
 
 a {
@@ -117,7 +128,7 @@ a:hover {
 	}
 
 	.text_container {
-		margin: 0;
+		margin: 5px;
 		margin-bottom: 20px;
 	}
 }

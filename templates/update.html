@@ -11,12 +11,10 @@
 		</div>
 
 		<div class="content_container">
-			<div class="update">
-				<form action="/update" method="post">
-					<input type="text" autocomplete="off" name="entry" placeholder="Alrighty, so today..." >
-					<button type="submit">Submit</button>
+				<form action="/update" method="post" class="update">
+					<textarea id="update-form" autocomplete="off" name="entry" placeholder="Alrighty, so today..."></textarea>
+					<button type="submit" id="update-submit">Submit</button>
 				</form>
-			</div>
 
 		</div>
 
