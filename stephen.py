@@ -7,7 +7,7 @@ from tempfile import mkdtemp
 import sqlalchemy
 from sqlalchemy import text, Table, Column, Integer, String, select, func, cast
 
-from helpers import login_required
+# from helpers import login_required
 
 app = Flask(__name__)
 
@@ -30,14 +30,14 @@ def index():
 			for row in user:
 				print(row["hash"])
 
-		
+
 		password2 = "3563A56801227AFEAA618181B62E15F08AD5FC21"
 
-		if not check_password_hash(password2, request.form.get("login")):
-			print("HTTP403: Wrong Password.")
-			print(password2)
-			print(request.form.get("login"))
-			return redirect("/")
+		# if not check_password_hash(password2, request.form.get("login")):
+		#	print("HTTP403: Wrong Password.")
+		#	print(password2)
+		#	print(request.form.get("login"))
+		#	return redirect("/")
 
 		return redirect("/update")
 
@@ -55,7 +55,6 @@ def index():
 		return render_template("index.html", dates=dates, entries=entries)
 
 @app.route("/update", methods=["GET", "POST"])
-@login_required
 def update():
 	if request.method == "POST":
 		entry = request.form.get("entry")
