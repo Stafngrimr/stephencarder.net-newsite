@@ -11,3 +11,5 @@ def login_required(f):
             return redirect("/index")
         return f(*args, **kwargs)
     return decorated_function
+
+## Let's just add a little comment here to see if I can do something with it on GitHub
